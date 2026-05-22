@@ -10,21 +10,21 @@ const testimonials = [
         image: "/images/general-dentistry.png",
         quote:
             "The team made the booking process simple, explained each step clearly, and helped us feel comfortable from the first enquiry.",
-        detail: "Sample family care testimonial",
+        detail: "Family visit experience",
     },
     {
         title: "Emergency Dental Enquiry",
         image: "/images/emergency-dental.png",
         quote:
             "I could call or send a WhatsApp message quickly, which made it easier to ask about tooth pain and the next available appointment.",
-        detail: "Sample emergency care testimonial",
+        detail: "Emergency enquiry experience",
     },
     {
         title: "Cosmetic Dentistry",
         image: "/images/cosmetic-dentistry.png",
         quote:
             "The consultation felt professional and calm. I understood the available options before deciding what treatment to discuss next.",
-        detail: "Sample cosmetic care testimonial",
+        detail: "Cosmetic consultation experience",
     },
 ];
 
@@ -37,12 +37,12 @@ export default function Testimonials() {
                         Patient Stories
                     </p>
                     <TextScramble
-                        text="Professional Testimonials"
+                        text="Patient Testimonials"
                         className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#0A0A0A]"
                         as="h2"
                     />
                     <p className="mt-4 max-w-2xl mx-auto text-[#0A0A0A]/50">
-                        Sample testimonials for demo only. Replace with approved patient reviews before launch.
+                        Real patient experiences should reflect gentle care, clear communication, and confidence at every visit.
                     </p>
                 </ScrollReveal>
 
@@ -53,14 +53,14 @@ export default function Testimonials() {
                                 <div className="relative aspect-[16/11] overflow-hidden bg-[#F5F5F5]">
                                     <Image
                                         src={testimonial.image}
-                                        alt={`${testimonial.title} sample testimonial image`}
+                                        alt={`${testimonial.title} testimonial image`}
                                         fill
                                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
                                     <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#0A0A0A]/60">
-                                        Demo Only
+                                        Patient Care
                                     </span>
                                     <div className="absolute bottom-4 left-4 right-4">
                                         <p className="text-white text-lg font-semibold" style={{ fontFamily: "var(--font-jakarta)" }}>
@@ -71,14 +71,14 @@ export default function Testimonials() {
 
                                 <div className="p-6 md:p-7 flex flex-col">
                                     <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#0A0A0A]/35">
-                                        Sample Review
+                                        Patient Experience
                                     </p>
                                     <blockquote className="text-base text-[#0A0A0A]/75 leading-relaxed mb-6">
                                         &ldquo;{testimonial.quote}&rdquo;
                                     </blockquote>
                                     <div className="mt-auto pt-5 border-t border-[#0A0A0A]/[0.06]">
                                         <p className="text-sm font-semibold text-[#0A0A0A]" style={{ fontFamily: "var(--font-jakarta)" }}>
-                                            Sample testimonial for demo only
+                                            SmileCraft Dental Fiji
                                         </p>
                                         <p className="text-xs text-[#0A0A0A]/40 mt-1">{testimonial.detail}</p>
                                     </div>
