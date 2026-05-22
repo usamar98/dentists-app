@@ -6,7 +6,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
 import Marquee from "@/components/sections/Marquee";
-import Services from "@/components/sections/Services";
+import Treatments from "@/components/sections/Treatments";
 import About from "@/components/sections/About";
 import AIAssistant from "@/components/sections/AIAssistant";
 import Booking from "@/components/sections/Booking";
@@ -47,7 +47,7 @@ export default function Home() {
       <main>
         <Hero />
         <Marquee />
-        <Services />
+        <Treatments />
         <About />
         <AIAssistant />
         <Booking />

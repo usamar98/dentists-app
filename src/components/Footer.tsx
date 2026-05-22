@@ -5,19 +5,19 @@ import ScrollReveal from "./animations/ScrollReveal";
 
 const quickLinks = [
     { label: "Home", href: "#home" },
-    { label: "Services", href: "#services" },
+    { label: "Treatments", href: "#treatments" },
     { label: "About Us", href: "#about" },
     { label: "Our Team", href: "#team" },
     { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },
 ];
 
-const services = [
-    "General Dentistry",
-    "Cosmetic Dentistry",
+const treatments = [
+    "Check-ups & Cleaning",
+    "Cosmetic Smile Care",
     "Dental Implants",
-    "Orthodontic Enquiries",
-    "Emergency Dentist in Fiji",
+    "Braces & Aligner Enquiries",
+    "Emergency Dental Care",
     "Family Dental Care",
 ];
 
@@ -65,13 +65,13 @@ export default function Footer() {
                             className="text-sm font-semibold mb-6 tracking-wider"
                             style={{ fontFamily: "var(--font-jakarta)" }}
                         >
-                            Services
+                            Treatments
                         </h4>
                         <ul className="space-y-3">
-                            {services.map((service) => (
-                                <li key={service}>
-                                    <a href="#services" className="text-sm text-white/50 hover:text-white transition-colors">
-                                        {service}
+                            {treatments.map((treatment) => (
+                                <li key={treatment}>
+                                    <a href="#treatments" className="text-sm text-white/50 hover:text-white transition-colors">
+                                        {treatment}
                                     </a>
                                 </li>
                             ))}
@@ -153,7 +153,7 @@ export default function Footer() {
             <div className="border-t border-white/[0.06]">
                 <div className="max-w-7xl mx-auto px-6 md:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-white/30">
-                        Copyright 2026 SmileCraft Dental Fiji. Demo content - replace licensing details with verified clinic information before launch.
+                        Copyright 2026 SmileCraft Dental Fiji. Treatment information is provided for general enquiry guidance.
                     </p>
                     <div className="flex items-center gap-6">
                         <a href="#" className="text-xs text-white/30 hover:text-white/60 transition-colors">
