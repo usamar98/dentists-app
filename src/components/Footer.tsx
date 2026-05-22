@@ -3,6 +3,26 @@
 import { useState } from "react";
 import ScrollReveal from "./animations/ScrollReveal";
 
+const quickLinks = [
+    { label: "Home", href: "#home" },
+    { label: "Services", href: "#services" },
+    { label: "About Us", href: "#about" },
+    { label: "Our Team", href: "#team" },
+    { label: "FAQ", href: "#faq" },
+    { label: "Contact", href: "#contact" },
+];
+
+const services = [
+    "General Dentistry",
+    "Cosmetic Dentistry",
+    "Dental Implants",
+    "Orthodontic Enquiries",
+    "Emergency Dentist in Fiji",
+    "Family Dental Care",
+];
+
+const seoTerms = ["Dentist in Fiji", "Dental clinic in Suva", "Emergency dentist in Fiji", "Family dental care in Fiji"];
+
 export default function Footer() {
     const [email, setEmail] = useState("");
     const [subscribed, setSubscribed] = useState(false);
@@ -19,7 +39,6 @@ export default function Footer() {
         <footer className="bg-[#0A0A0A] text-white" role="contentinfo">
             <div className="max-w-7xl mx-auto px-6 md:px-8 py-20">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
-                    {/* Quick Links */}
                     <ScrollReveal>
                         <h4
                             className="text-sm font-semibold mb-6 tracking-wider"
@@ -28,22 +47,19 @@ export default function Footer() {
                             Quick Links
                         </h4>
                         <ul className="space-y-3">
-                            {["Home", "Services", "About Us", "Our Team", "FAQ", "Contact"].map(
-                                (link) => (
-                                    <li key={link}>
-                                        <a
-                                            href={`#${link.toLowerCase().replace(/\s/g, "-")}`}
-                                            className="text-sm text-white/50 hover:text-white transition-colors"
-                                        >
-                                            {link}
-                                        </a>
-                                    </li>
-                                )
-                            )}
+                            {quickLinks.map((link) => (
+                                <li key={link.href}>
+                                    <a
+                                        href={link.href}
+                                        className="text-sm text-white/50 hover:text-white transition-colors"
+                                    >
+                                        {link.label}
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </ScrollReveal>
 
-                    {/* Services */}
                     <ScrollReveal delay={0.1}>
                         <h4
                             className="text-sm font-semibold mb-6 tracking-wider"
@@ -52,24 +68,16 @@ export default function Footer() {
                             Services
                         </h4>
                         <ul className="space-y-3">
-                            {[
-                                "General Dentistry",
-                                "Cosmetic Dentistry",
-                                "Dental Implants",
-                                "Orthodontics",
-                                "Emergency Care",
-                                "AI Smile Analysis",
-                            ].map((s) => (
-                                <li key={s}>
+                            {services.map((service) => (
+                                <li key={service}>
                                     <a href="#services" className="text-sm text-white/50 hover:text-white transition-colors">
-                                        {s}
+                                        {service}
                                     </a>
                                 </li>
                             ))}
                         </ul>
                     </ScrollReveal>
 
-                    {/* Contact */}
                     <ScrollReveal delay={0.2}>
                         <h4
                             className="text-sm font-semibold mb-6 tracking-wider"
@@ -78,31 +86,42 @@ export default function Footer() {
                             Contact
                         </h4>
                         <ul className="space-y-3 text-sm text-white/50">
-                            <li>123 George Street</li>
-                            <li>Sydney NSW 2000</li>
+                            <li>Central Suva, Fiji</li>
+                            <li>Serving Suva, Nadi, Lautoka</li>
                             <li>
-                                <a href="tel:+61290001234" className="hover:text-white transition-colors">
-                                    (02) 9000 1234
+                                <a href="tel:+6797001234" className="hover:text-white transition-colors">
+                                    +679 700 1234
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:hello@smilecraftdental.com.au" className="hover:text-white transition-colors">
-                                    hello@smilecraftdental.com.au
+                                <a href="https://wa.me/6797001234?text=I%20would%20like%20to%20make%20a%20dental%20enquiry" className="hover:text-white transition-colors">
+                                    WhatsApp enquiry
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:hello@smilecraftfiji.com" className="hover:text-white transition-colors">
+                                    hello@smilecraftfiji.com
                                 </a>
                             </li>
                         </ul>
                     </ScrollReveal>
 
-                    {/* Newsletter */}
                     <ScrollReveal delay={0.3}>
                         <h4
                             className="text-sm font-semibold mb-6 tracking-wider"
                             style={{ fontFamily: "var(--font-jakarta)" }}
                         >
-                            Newsletter
+                            Local SEO
                         </h4>
+                        <div className="flex flex-wrap gap-2 mb-6">
+                            {seoTerms.map((term) => (
+                                <a key={term} href="#contact" className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-white/50 hover:text-white transition-colors">
+                                    {term}
+                                </a>
+                            ))}
+                        </div>
                         <p className="text-sm text-white/50 mb-4">
-                            Get dental tips and exclusive offers delivered to your inbox.
+                            Get Fiji dental care updates and clinic news.
                         </p>
                         {!subscribed ? (
                             <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
@@ -124,18 +143,17 @@ export default function Footer() {
                             </form>
                         ) : (
                             <p className="text-sm text-white/70">
-                                ✓ Thanks for subscribing!
+                                Thanks for subscribing.
                             </p>
                         )}
                     </ScrollReveal>
                 </div>
             </div>
 
-            {/* Bottom Bar */}
             <div className="border-t border-white/[0.06]">
                 <div className="max-w-7xl mx-auto px-6 md:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-white/30">
-                        © 2025 SmileCraft Dental. All rights reserved.
+                        Copyright 2026 SmileCraft Dental Fiji. Demo content - replace licensing details with verified clinic information before launch.
                     </p>
                     <div className="flex items-center gap-6">
                         <a href="#" className="text-xs text-white/30 hover:text-white/60 transition-colors">
@@ -146,7 +164,7 @@ export default function Footer() {
                         </a>
                     </div>
                     <p className="text-xs text-white/20">
-                        Website powered by AI Technology
+                        WhatsApp-ready dental website
                     </p>
                 </div>
             </div>

@@ -17,18 +17,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SmileCraft Dental | Premium Dental Care Sydney | Award-Winning Dentists",
+  title: "SmileCraft Dental Fiji | Dentist in Fiji",
   description:
-    "Experience award-winning dental care in Sydney. SmileCraft Dental offers AI-powered diagnostics, cosmetic dentistry, implants, and emergency care. Book online today.",
+    "SmileCraft Dental Fiji demo for Suva, Nadi, Lautoka, and nearby communities with WhatsApp enquiries, call buttons, Google Maps, opening hours, and address.",
   keywords:
-    "dentist Sydney, dental clinic Sydney, cosmetic dentistry, dental implants, Invisalign Sydney, emergency dentist, AI dental, SmileCraft Dental",
+    "Dentist in Fiji, Dental clinic in Suva, Emergency dentist in Fiji, Family dental care in Fiji, Suva dentist, Nadi dentist, Lautoka dentist",
   openGraph: {
-    title: "SmileCraft Dental | Premium Dental Care in Sydney",
+    title: "SmileCraft Dental Fiji | Dentist in Fiji",
     description:
-      "Award-winning dental care powered by AI technology. Trusted by 15,000+ Australians.",
+      "Dental care in Suva, Nadi, Lautoka, and across Fiji with WhatsApp enquiries and Google Maps contact details.",
     type: "website",
-    locale: "en_AU",
-    url: "https://smilecraftdental.com.au",
+    locale: "en_FJ",
+    url: "https://smilecraftfiji.com",
   },
   robots: "index, follow",
 };
@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-AU">
+    <html lang="en-FJ">
       <body
         className={`${jakarta.variable} ${inter.variable} antialiased`}
         style={{ fontFamily: "var(--font-inter)" }}

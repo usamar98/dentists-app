@@ -7,33 +7,37 @@ import TextScramble from "../animations/TextScramble";
 
 const faqs = [
     {
-        q: "What health funds do you accept?",
-        a: "We accept all major Australian health funds including Medibank, Bupa, HCF, NIB, CBHS, Teachers Health, and many more. We have HICAPS on-site for instant claims processing, so you only pay the gap on the day.",
+        q: "Where is the clinic located?",
+        a: "This Fiji demo uses a Central Suva address and highlights service areas in Suva, Nadi, Lautoka, and nearby Fiji communities. Update it with the clinic's exact address before launch.",
     },
     {
-        q: "How does the AI dental assistant work?",
-        a: "Our AI assistant uses advanced natural language processing to understand your dental concerns, provide preliminary information, and help schedule appointments. It's available 24/7 through our website and can answer questions about treatments, pricing, and availability. It's designed to supplement — not replace — our expert clinical team.",
+        q: "How can patients make an enquiry?",
+        a: "Patients can tap the WhatsApp button, call the clinic, use the booking form, or view the Google Maps location from the contact section.",
     },
     {
-        q: "Is the online booking system real-time?",
-        a: "Yes! Our booking system shows live availability and confirms your appointment instantly. You'll receive an email and SMS confirmation, along with automated reminders before your visit. You can also reschedule or cancel online up to 24 hours before your appointment.",
+        q: "Do you handle emergency dental enquiries?",
+        a: "Yes. The page includes emergency dentist in Fiji messaging and fast call or WhatsApp actions for tooth pain, swelling, broken teeth, or urgent dental concerns.",
     },
     {
-        q: "Do you offer payment plans?",
-        a: "Absolutely. We understand dental care is an investment. We offer interest-free payment plans starting from $25/week through our partnership with Afterpay and Zip. We also provide custom payment arrangements for larger treatments like implants and orthodontics.",
+        q: "How are treatment costs handled?",
+        a: "Costs depend on the treatment and patient needs. This demo directs patients to request a clinic quote before treatment begins.",
     },
     {
-        q: "What COVID-safe measures are in place?",
-        a: "Patient safety is our top priority. We follow all ADA guidelines including enhanced sterilisation protocols, HEPA air filtration, PPE for all staff, pre-appointment screening, and reduced waiting room capacity. Our clinic undergoes regular deep cleaning and all equipment is sterilised between patients.",
+        q: "Is this suitable for family dental care?",
+        a: "Yes. The content is positioned for family dental care in Fiji, including check-ups, preventive care, children's visits, and general treatment enquiries.",
     },
     {
-        q: "How do I prepare for my first visit?",
-        a: "Please arrive 10 minutes early to complete any paperwork. Bring your health fund card, photo ID, and any relevant dental records or X-rays from previous dentists. If you have dental anxiety, let us know when booking — we have special measures to ensure your comfort, including sedation options.",
+        q: "Can real doctor profiles be added later?",
+        a: "Yes. The team section uses placeholders until the clinic provides approved names, qualifications, photos, and registration details.",
+    },
+    {
+        q: "Can the enquiry assistant be optional?",
+        a: "Yes. Normal dentist websites can use a WhatsApp enquiry assistant, while premium websites can show an AI patient enquiry demo.",
     },
 ];
 
 export default function FAQ() {
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
         <section id="faq" className="py-24 md:py-32 bg-white">
@@ -51,7 +55,7 @@ export default function FAQ() {
 
                 <div className="space-y-3">
                     {faqs.map((faq, i) => (
-                        <ScrollReveal key={i} delay={i * 0.05}>
+                        <ScrollReveal key={faq.q} delay={i * 0.05}>
                             <div className="border border-[#0A0A0A]/[0.06] rounded-2xl overflow-hidden">
                                 <button
                                     className="w-full flex items-center justify-between px-6 py-5 text-left"

@@ -2,10 +2,10 @@
 
 export default function Marquee() {
     const text =
-        "GENTLE CARE • MODERN TECHNOLOGY • BEAUTIFUL SMILES • TRUSTED BY 15,000+ AUSTRALIANS • AI-POWERED DIAGNOSTICS • ";
+        "DENTIST IN FIJI - DENTAL CLINIC IN SUVA - EMERGENCY DENTIST IN FIJI - FAMILY DENTAL CARE IN FIJI - WHATSAPP ENQUIRIES - ";
 
     return (
-        <section className="bg-[#0A0A0A] py-5 overflow-hidden" aria-label="Features marquee">
+        <section className="bg-[#0A0A0A] py-5 overflow-hidden" aria-label="Local SEO phrases">
             <div className="marquee-track">
                 {[...Array(4)].map((_, i) => (
                     <span

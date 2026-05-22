@@ -20,11 +20,11 @@ export default function FloatingElements({ onOpenChat }: FloatingElementsProps) 
 
     return (
         <>
-            {/* AI Chat Bubble - Bottom Right */}
+            {/* WhatsApp enquiry bubble - Bottom Right */}
             <motion.button
                 className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#0A0A0A] text-white flex items-center justify-center shadow-xl hover:bg-[#333] transition-colors"
                 onClick={onOpenChat}
-                aria-label="Open AI Chat"
+                aria-label="Open WhatsApp enquiry assistant"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 3, type: "spring" }}
@@ -38,18 +38,18 @@ export default function FloatingElements({ onOpenChat }: FloatingElementsProps) 
                 <span className="absolute inset-0 rounded-full border-2 border-[#0A0A0A]" style={{ animation: "pulse-ring 2s ease-out infinite" }} />
             </motion.button>
 
-            {/* Book Now - Mobile, Bottom Left */}
+            {/* WhatsApp - Mobile, Bottom Left */}
             <AnimatePresence>
                 {showBookNow && (
                     <motion.a
-                        href="#booking"
+                        href="https://wa.me/6797001234?text=I%20would%20like%20to%20book%20a%20dental%20appointment"
                         className="fixed bottom-6 left-6 z-40 md:hidden px-5 py-3 rounded-full bg-[#0A0A0A] text-white text-sm font-medium shadow-xl"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 20 }}
                         transition={{ duration: 0.3 }}
                     >
-                        Book Now
+                        WhatsApp
                     </motion.a>
                 )}
             </AnimatePresence>

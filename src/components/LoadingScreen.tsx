@@ -27,7 +27,7 @@ export default function LoadingScreen() {
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
                         >
-                            Smile
+                            SmileCraft
                         </motion.span>
                         <motion.span
                             className="text-4xl md:text-6xl font-light text-white tracking-tight"
@@ -36,7 +36,7 @@ export default function LoadingScreen() {
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
                         >
-                            Craft
+                            Fiji
                         </motion.span>
                     </div>
                     <motion.div

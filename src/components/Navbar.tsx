@@ -7,7 +7,7 @@ const menuItems = [
     { label: "Home", href: "#home" },
     { label: "Services", href: "#services" },
     { label: "About", href: "#about" },
-    { label: "AI Assistant", href: "#ai-assistant" },
+    { label: "Assistant", href: "#ai-assistant" },
     { label: "Booking", href: "#booking" },
     { label: "Contact", href: "#contact" },
 ];
@@ -45,18 +45,18 @@ export default function Navbar() {
                 <div className="max-w-7xl mx-auto px-6 md:px-8">
                     <div className="flex items-center justify-between h-20">
                         {/* Logo */}
-                        <a href="#home" className="flex items-center gap-1" aria-label="SmileCraft Dental Home">
+                        <a href="#home" className="flex items-center gap-1" aria-label="SmileCraft Dental Fiji Home">
                             <span
                                 className="text-xl font-bold tracking-tight text-[#0A0A0A]"
                                 style={{ fontFamily: "var(--font-jakarta)" }}
                             >
-                                Smile
+                                SmileCraft
                             </span>
                             <span
                                 className="text-xl font-light tracking-tight text-[#0A0A0A]"
                                 style={{ fontFamily: "var(--font-jakarta)" }}
                             >
-                                Craft
+                                Fiji
                             </span>
                         </a>
 
@@ -77,10 +77,10 @@ export default function Navbar() {
                         {/* CTA + Hamburger */}
                         <div className="flex items-center gap-4">
                             <a
-                                href="#booking"
+                                href="https://wa.me/6797001234?text=I%20would%20like%20to%20book%20a%20dental%20appointment"
                                 className="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-[#0A0A0A] text-white text-sm font-medium rounded-full hover:bg-[#333] transition-colors duration-300"
                             >
-                                Book Now
+                                WhatsApp
                             </a>
 
                             {/* Hamburger */}
@@ -137,14 +137,14 @@ export default function Navbar() {
                                 </motion.a>
                             ))}
                             <motion.a
-                                href="#booking"
+                                href="https://wa.me/6797001234?text=I%20would%20like%20to%20book%20a%20dental%20appointment"
                                 className="mt-4 px-10 py-4 bg-[#0A0A0A] text-white text-lg font-medium rounded-full"
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.5, duration: 0.4 }}
                                 onClick={() => setMobileOpen(false)}
                             >
-                                Book Appointment
+                                WhatsApp Enquiry
                             </motion.a>
                         </nav>
                     </motion.div>

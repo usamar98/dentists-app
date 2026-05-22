@@ -19,11 +19,11 @@ export default function TextScramble({
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-50px" });
     const [display, setDisplay] = useState(text);
-    const [hasAnimated, setHasAnimated] = useState(false);
+    const hasAnimated = useRef(false);
 
     useEffect(() => {
-        if (!isInView || hasAnimated) return;
-        setHasAnimated(true);
+        if (!isInView || hasAnimated.current) return;
+        hasAnimated.current = true;
 
         let frame = 0;
         const totalFrames = 20;
@@ -46,7 +46,7 @@ export default function TextScramble({
         }, 40);
 
         return () => clearInterval(interval);
-    }, [isInView, text, hasAnimated]);
+    }, [isInView, text]);
 
     return (
         <Tag ref={ref} className={className}>
