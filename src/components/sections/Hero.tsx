@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import MagneticButton from "../animations/MagneticButton";
 
-const words = ["Dental", "Care", "in", "Fiji"];
-
 const trustBadges = [
     { icon: "FJ", label: "Suva / Nadi / Lautoka / Fiji" },
     { icon: "WA", label: "WhatsApp enquiries" },
@@ -37,21 +35,7 @@ export default function Hero() {
                                 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1]"
                                 style={{ fontFamily: "var(--font-jakarta)" }}
                             >
-                                {words.map((word, i) => (
-                                    <motion.span
-                                        key={word}
-                                        className="inline-block"
-                                        initial={{ y: 100, opacity: 0 }}
-                                        animate={{ y: 0, opacity: 1 }}
-                                        transition={{
-                                            duration: 0.8,
-                                            delay: 2.5 + i * 0.12,
-                                            ease: [0.25, 0.1, 0.25, 1],
-                                        }}
-                                    >
-                                        {word}{i < words.length - 1 ? "\u00A0" : ""}
-                                    </motion.span>
-                                ))}
+                                Dental Care in Fiji
                             </h1>
                         </div>
 
